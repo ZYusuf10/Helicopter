@@ -2,7 +2,7 @@
 let gameArea = document.getElementById("gameArea");
 gameArea.style.width="800px";
 gameArea.style.height = "500px";
-document.getElementById("heliVoice").play();
+
 
 /*add the helicopter and allow it to be thusted upwards. 
   if left allown it will fall to the ground in an accelerating manner.
