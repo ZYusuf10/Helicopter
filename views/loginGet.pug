@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  nav
+    ul
+        li
+            a(href="/") home
+  h2= title
+  form(method='POST' action='/loginPost')
+    label(for=username) Enter username
+    input#username.form-control(type='text' placeholder='Enter username' name='username' required='true')
+    br
+    label(for=password) Enter password
+    input#password.form-control(type='text' placeholder='Enter Pass' name='password' required='true')
+    br
+    button.btn.btn-primary(type='submit') Login

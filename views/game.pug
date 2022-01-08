@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  
+  nav
+    h2= title
+  input(type="button" onclick="restart()" value="restart")
+  div(id="gameArea") 
+    img(src="images/copter.gif" id="copter")
+  script(src="/javascripts/game.js" type="text/javascript")
