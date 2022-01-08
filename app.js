@@ -22,6 +22,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
+//serve static data
+app.use(express.static('public'));
 
 app.use('/', indexRouter);
 
@@ -35,7 +37,8 @@ app.use(function(req, res, next) {
 
 //setup the database conenction
 var mongoose = require('mongoose');
-const mongoDb = "mongodb+srv://heli45:flyFar27@cluster0.hbcre.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var devUrl = "mongodb+srv://heli45:flyFar27@cluster0.hbcre.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var mongoDb = process.env.mongoDB_URI || devUrl;
 mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
