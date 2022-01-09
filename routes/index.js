@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var User = require('../models/Users');
+var User = require('../models/users');
 //get controllers(
 var userAction = require('../controllers/userAction');
 /* GET home page. */

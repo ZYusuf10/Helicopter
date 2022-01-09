@@ -1,6 +1,9 @@
 {
   "name": "helicopter",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.13.1"
+  },
   "description": "2d helicopter game",
   "main": "app.js",
   "scripts": {
