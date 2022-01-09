@@ -4,7 +4,7 @@
 var async = require('async');
 
 //get models
-var User = require('../models/Users');
+var User = require('../models/UsersN');
 //display homePage
 exports.homeGet = function(req, res){
     res.render('home', {title: 'Login or Signup to play the helicopter game'});

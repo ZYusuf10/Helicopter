@@ -43,9 +43,8 @@ mongoose.connect(mongoDb, { useUnifiedTopology: true, useNewUrlParser: true });
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "mongo connection error"));
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, function () {
-    console.log('zakariyeyusuf listening on port'+PORT);
+app.listen(8080 || process.env.port, function () {
+    console.log('zakariyeyusuf listening on port 8080.')
   })
 
 
